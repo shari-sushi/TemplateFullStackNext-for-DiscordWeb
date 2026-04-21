@@ -6,7 +6,7 @@ services:
     command: redis-server --appendonly yes
 
   app:
-    image: node:22-alpine
+    build: .
     working_dir: /work/app
     ports:
       - "3000:3000"
